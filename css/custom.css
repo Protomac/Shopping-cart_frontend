@@ -1,6 +1,12 @@
 .container-fluid{
     padding: 10px;
 }
-.red{
-    background-color:red;
+.heart-off {
+    color :darkgrey;
+}
+.heart-on {
+    color:red;
+}
+.fa-shopping-cart{
+    color:blue;
 }
