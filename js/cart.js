@@ -5,7 +5,9 @@ $(function () {
      price = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200];
      item_price = [0,0,0,0,0,0,0,0,0,0,0,0];
      cart_list = $("#product_list");
-}
+     retrieve();
+     show_cart();
+})
 //calculates total price of each item
 function calculate_amt() {
     for(let i in item_price){
@@ -27,7 +29,23 @@ function show_cart() {
 
     for(i=0;i<12;i++){
         if(qty[i]){
-            let trow = $(`<tr>`.attr('data-id',i));
+            let trow = $(`<tr>`).attr('data-id',i);
+            let col1 = $(`<td>`);
+            let col2 = $(`<td>`);
+            let col3 = $(`<td>`);
+            let col4 = $(`<td>`);
+            let col5 = $(`<td>`);
+
+            trow.append(col1.append($(`<span>${i+1}</span>`)));
+            trow.append(col2.append($(`<span>${p_name[i]}</span>`)));
+            trow.append(col3.append($(`<span>${qty[i]}</span>`)));
+            trow.append(col4.append($(`<span>${price[i]}</span>`)));
+            trow.append(col5.append($(`<span>${item_price[i]}</span>`)));
+
+            cart_list.append(trow);
+
+
+
 
         }
     }

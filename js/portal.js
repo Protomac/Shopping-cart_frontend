@@ -1,12 +1,13 @@
+qty = [0,0,0,0,0,0,0,0,0,0,0,0];
+
 
 //script for maintaining home page and adding product into local storage while using add to cart button
 $(function () {
 
-    var qty = [0,0,0,0,0,0,0,0,0,0,0,0];
 
     $('.btn-outline-primary').click(function (ev) {
         let id = $(ev.target).parent().attr('data-id');//to access the data-id of parent div of btn (add to cart)
-        //console.log(id);
+        console.log(id);
         add_and_save(id);
     })
 
